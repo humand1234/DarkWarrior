@@ -9,11 +9,83 @@
     <script src="https://kit.fontawesome.com/14041db2d0.js" crossorigin="anonymous"></script>
     <style>
         body {
-            padding-top: 80px; /* Adjust based on the header's height */
+            padding-top: 80px;
+            background: #f8f6fc;
         }
-
         header {
-            height: 80px; /* Ensure the header has a consistent height */
+            height: 80px;
+        }
+        /* Hero Section */
+        #Home {
+            background: linear-gradient(135deg, #a05cd1 0%, #431657 100%);
+            color: #fff;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            border-radius: 0 0 40px 40px;
+            box-shadow: 0 8px 32px rgba(67,22,87,0.15);
+        }
+        #Home h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        #Home .btn-primary {
+            background: #fff;
+            color: #a05cd1;
+            border: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s, color 0.3s;
+        }
+        #Home .btn-primary:hover {
+            background: #a05cd1;
+            color: #fff;
+        }
+        /* Card Hover Effect */
+        .card {
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(160,92,209,0.08);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(160,92,209,0.18);
+        }
+        .card-img-top {
+            object-fit: cover;
+            height: 220px;
+            border-top-left-radius: 18px;
+            border-top-right-radius: 18px;
+        }
+        .card-body {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        /* Footer */
+        footer {
+            background: linear-gradient(182deg, #431657 0%, #a05cd1 100%);
+            border-radius: 40px 40px 0 0;
+            margin-top: 40px;
+        }
+        footer i {
+            font-size: 1.5rem;
+            margin: 0 8px;
+            vertical-align: middle;
+        }
+        /* Fade-in Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: none;
         }
     </style>
 </head>
@@ -52,16 +124,17 @@
     </header>
 
     <!-- Add a margin-top to the first section -->
-    <section  class="p-4" id="Home">
+    <section class="p-4" id="Home">
         <div class="container-fluid">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="img/dark man with violet sword.png" alt="" class="img-fluid rounded-circle">
+                <div class="col-md-6 text-center">
+                    <img src="img/dark man with violet sword.png" alt="" class="img-fluid rounded-circle shadow-lg" style="max-width: 320px;">
                 </div>
                 <div class="col-md-6 pt-3 col-12 text-center">
                     <h2>Welcome to Dark Warrior</h2>
                     <h5>We create anime, cartoon, digital paintings <br><strong>for you</strong>.</h5>
                     <p>We are a team of artists and designers who are passionate about creating unique and eye-catching designs. Our goal is to help you stand out from the crowd and make a lasting impression.</p>
+                    <a href="#Services" class="btn btn-primary btn-lg shadow">Explore Our Services</a>
                 </div>
             </div>
         </div>
@@ -93,7 +166,7 @@
             <div class="card-body">
               <h5 class="card-title">Anime design</h5>
               <p class="card-text">We create stunning digital artworks tailored to your vision.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="anime.html" class="btn btn-primary">Learn More</a>
             </div>
           </div>
           
@@ -107,7 +180,7 @@
             <div class="card-body">
               <h5 class="card-title">3D Modeling</h5>
               <p class="card-text">We create stunning digital artworks tailored to your vision.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="3D.html" class="btn btn-primary">Learn More</a>
             </div>
           </div>
           
@@ -120,7 +193,7 @@
             <div class="card-body">
               <h5 class="card-title">Cartoon creating</h5>
               <p class="card-text">We create stunning digital artworks tailored to your vision.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="cartoon.html" class="btn btn-primary">Learn More</a>
             </div>
           </div>
           
@@ -133,7 +206,7 @@
             <div class="card-body">
               <h5 class="card-title">Icon designing</h5>
               <p class="card-text">We create stunning digital artworks tailored to your vision.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="icon.html" class="btn btn-primary">Learn More</a>
             </div>
           </div>
           
@@ -146,7 +219,7 @@
             <div class="card-body">
               <h5 class="card-title">Custom design print</h5>
               <p class="card-text">We create stunning digital artworks tailored to your vision.</p>
-              <a href="#" class="btn btn-primary">Learn More</a>
+              <a href="custom design.html" class="btn btn-primary">Learn More</a>
             </div>
           </div>
           
@@ -168,7 +241,7 @@
               <div class="card-body">
                 <h5 class="card-title">Patterned Vases</h5>
                 <p class="card-text">Perfect for displaying fresh flowers, adding artistic flair to interior spaces, or even repurposed as decorative storage containers.</p>
-                <a href="#" class="btn btn-primary">Buy Now</a>
+                <a href="patterned vase.html" class="btn btn-primary">Buy Now</a>
               </div>
             </div>
             
@@ -177,11 +250,11 @@
         <div class="col-12 col-md-4 d-flex justify-content-center p-4">
           <br>
           <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="img/a creative product design.png" alt="Card image cap">
+            <img class="card-img-top" src="img/a stylish product design.png" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Tableware</h5>
               <p class="card-text"> Elevate everyday dining experiences with distinctive designs and personalized elements.Enjoy the sight of creativity.</p>
-              <a href="#" class="btn btn-primary">Buy Now</a>
+              <a href="tableware.html" class="btn btn-primary">Buy Now</a>
             </div>
           </div>
 
@@ -189,11 +262,11 @@
       <div class="col-12 col-md-4 d-flex justify-content-center p-4">
         <br>
         <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/a stylish product design.png" alt="Card image cap">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Handcrafted Wall Art 1">
           <div class="card-body">
             <h5 class="card-title">Handcrafted Wall </h5>
             <p class="card-text">Bring personality to a space while serving as conversation starters.Elevate your mood and calmness through creativity.</p>
-            <a href="#" class="btn btn-primary">Buy Now</a>
+            <a href="handcraftedwall.html" class="btn btn-primary">Buy Now</a>
           </div>
         </div>
     </section>
@@ -204,23 +277,38 @@
       </div>
     </section>
     
-    <footer class="text-center text-white py-3 col-md-12" style="background: #a05cd1; background: linear-gradient(182deg, rgba(160, 92, 209, 1) 0%, rgba(67, 22, 87, 1) 100%);; text-decoration: none;"   >
+    <footer class="text-center text-white py-3 col-md-12">
         <div class="container">
-            <p>Follow us on social media:</p>
-            <i class="fa-brands fa-square-facebook"></i>
-            <a href="#" class="text-light">Facebook</a> |
-            <i class="fa-brands fa-instagram"></i>
-            <a href="#" class="text-light">Instagram</a> |
-            <i class="fa-brands fa-square-x-twitter"></i>
-            <a href="#" class="text-light">Twitter</a> |
-            <i class="fa-brands fa-linkedin"></i>
-            <a href="#" class="text-light">LinkedIn</a>
-      <p class="pt-3">&copy; 2023 Dark Warrior Digital Painting Services. All rights reserved.</p>
+            <p class="mb-2">Follow us on social media:</p>
+            <a href="#" class="text-light mx-2"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#" class="text-light mx-2"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="text-light mx-2"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href="#" class="text-light mx-2"><i class="fa-brands fa-linkedin"></i></a>
+            <p class="pt-3 mb-0">&copy; 2023 Dark Warrior Digital Painting Services. All rights reserved.</p>
+        </div>
     </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<script>
+        // Fade-in animation on scroll
+        function revealOnScroll() {
+            document.querySelectorAll('.fade-in').forEach(function(el) {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight - 60) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('section, .card').forEach(function(el) {
+                el.classList.add('fade-in');
+            });
+            revealOnScroll();
+        });
+    </script>
 
 </body>
 </html>
