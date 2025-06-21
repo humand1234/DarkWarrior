@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dark Warrior Tableware</title>
+    <link rel="icon" type="image/x-icon" href="img/dark man with violet sword.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #23272b 0%, #181a1b 100%);
+            color: #f8f9fa;
+        }
+        .navbar, .card, .modal-content, footer {
+            background: #23272b;
+        }
+        .navbar-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
+            letter-spacing: 2px;
+        }
+        .star-rating .fa-star {
+            color: #ffc107;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .star-rating .fa-star:hover {
+            transform: scale(1.2);
+        }
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: none;
+            border-radius: 1.2rem;
+            box-shadow: 0 6px 32px rgba(0,0,0,0.18);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 12px 48px rgba(160,92,209,0.18);
+        }
+        .card-img-top {
+            object-fit: cover;
+            height: 220px;
+            border-top-left-radius: 1.2rem;
+            border-top-right-radius: 1.2rem;
+        }
+        .card-body {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .btn-warning, .btn-primary {
+            font-weight: bold;
+            border-radius: 2rem;
+            box-shadow: 0 2px 8px rgba(255,193,7,0.08);
+        }
+        .btn-warning:hover, .btn-primary:hover {
+            filter: brightness(1.1);
+            box-shadow: 0 4px 16px rgba(255,193,7,0.18);
+        }
+        .modal-content {
+            border-radius: 1rem;
+        }
+        .modal-header {
+            border-bottom: 1px solid #444;
+        }
+        .modal-title {
+            font-weight: bold;
+            color: #ffb400;
+        }
+        .form-label {
+            color: #ffb400;
+        }
+        #reviewsList .border {
+            border-color: #444 !important;
+        }
+        footer {
+            background: linear-gradient(90deg, #23272b 60%, #181a1b 100%);
+            color: #ffb400;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        /* Responsive header text */
+        @media (max-width: 600px) {
+            .display-4 {
+                font-size: 2rem;
+            }
+        }
+        .card-body .btn {
+            min-width: 0;
+            width: 100%;
+            white-space: nowrap;
+        }
+        .card-body .d-flex.gap-2 > .btn {
+            flex: 1 1 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Dark Warrior Tableware</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-5 text-center">
+        <div class="container">
+            <h1 class="display-4">Elevate Your Table with Dark Warrior</h1>
+            <p class="lead">Premium, stylish tableware for the modern warrior's home.</p>
+        </div>
+    </header>
+
+    <section id="products" class="container py-4">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card text-light">
+                    <img src="img/a stylish product design.png" class="card-img-top" alt="Tableware Set">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Warrior Tableware</h5>
+                            <p class="card-text">Elevate everyday dining experiences with distinctive designs and personalized elements. Enjoy the sight of creativity.</p>
+                            <p class="fw-bold">$39.99</p>
+                        </div>
+                        <div class="d-flex gap-2 mt-3">
+                            <button class="btn btn-warning flex-fill" data-bs-toggle="modal" data-bs-target="#reviewModal">Rate & Review</button>
+                            <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#buyModal">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-light">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Cutlery Set">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Shadow Cutlery Set</h5>
+                            <p class="card-text">Sleek, stainless steel cutlery. Set of 16 pieces.</p>
+                            <p class="fw-bold">$49.99</p>
+                        </div>
+                        <div class="d-flex gap-2 mt-3">
+                            <button class="btn btn-warning flex-fill" data-bs-toggle="modal" data-bs-target="#reviewModal">Rate & Review</button>
+                            <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#buyModal">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-light">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" class="card-img-top" alt="Goblet Set">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Night Goblet Set</h5>
+                            <p class="card-text">Elegant, dark glass goblets. Set of 6.</p>
+                            <p class="fw-bold">$29.99</p>
+                        </div>
+                        <div class="d-flex gap-2 mt-3">
+                            <button class="btn btn-warning flex-fill" data-bs-toggle="modal" data-bs-target="#reviewModal">Rate & Review</button>
+                            <button class="btn btn-primary flex-fill" data-bs-toggle="modal" data-bs-target="#buyModal">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="container py-5">
+        <h2 class="mb-4">Customer Reviews</h2>
+        <div id="reviewsList">
+            <!-- Reviews will appear here -->
+        </div>
+    </section>
+
+    <!-- Review Modal -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel">Rate & Leave an Opinion</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="reviewerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Rating</label>
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-value="1"></span>
+                                <span class="fa fa-star" data-value="2"></span>
+                                <span class="fa fa-star" data-value="3"></span>
+                                <span class="fa fa-star" data-value="4"></span>
+                                <span class="fa fa-star" data-value="5"></span>
+                            </div>
+                            <input type="hidden" id="rating" value="0" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Opinion</label>
+                            <textarea class="form-control" id="opinion" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buy Modal -->
+    <div class="modal fade" id="buyModal" tabindex="-1" aria-labelledby="buyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content text-light" style="background:#23272b;">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="buyModalLabel">Purchase Product</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="buyForm">
+                        <div class="mb-3">
+                            <label class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="buyerName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="buyerEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Shipping Address</label>
+                            <textarea class="form-control" id="buyerAddress" rows="2" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100">Confirm Purchase</button>
+                    </form>
+                    <div id="buySuccess" class="mt-3 text-success" style="display:none;">
+                        Thank you for your purchase! We will contact you soon.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-4 mt-5" style="background:#23272b;">
+        &copy; 2024 Dark Warrior Tableware. All rights reserved.
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Star rating logic
+        document.querySelectorAll('.star-rating .fa-star').forEach(star => {
+            star.addEventListener('mouseover', function() {
+                let val = this.getAttribute('data-value');
+                highlightStars(val);
+            });
+            star.addEventListener('mouseout', function() {
+                let current = document.getElementById('rating').value;
+                highlightStars(current);
+            });
+            star.addEventListener('click', function() {
+                let val = this.getAttribute('data-value');
+                document.getElementById('rating').value = val;
+                highlightStars(val);
+            });
+        });
+
+        function highlightStars(count) {
+            document.querySelectorAll('.star-rating .fa-star').forEach(star => {
+                if (star.getAttribute('data-value') <= count) {
+                    star.classList.add('text-warning');
+                } else {
+                    star.classList.remove('text-warning');
+                }
+            });
+        }
+
+        // Review form logic
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('reviewerName').value;
+            const rating = document.getElementById('rating').value;
+            const opinion = document.getElementById('opinion').value;
+            if (rating == 0) {
+                alert('Please select a rating.');
+                return;
+            }
+            const reviewHTML = `
+                <div class="mb-3 p-3 border rounded" style="background:#23272b;">
+                    <strong>${name}</strong>
+                    <div>
+                        ${'<span class="fa fa-star text-warning"></span>'.repeat(rating)}
+                        ${'<span class="fa fa-star text-secondary"></span>'.repeat(5-rating)}
+                    </div>
+                    <p class="mb-0">${opinion}</p>
+                </div>
+            `;
+            document.getElementById('reviewsList').innerHTML += reviewHTML;
+            document.getElementById('reviewForm').reset();
+            document.getElementById('rating').value = 0;
+            highlightStars(0);
+            var modal = bootstrap.Modal.getInstance(document.getElementById('reviewModal'));
+            modal.hide();
+        });
+
+        // Buy form logic
+        document.getElementById('buyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('buySuccess').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('buyForm').reset();
+                document.getElementById('buySuccess').style.display = 'none';
+                var modal = bootstrap.Modal.getInstance(document.getElementById('buyModal'));
+                modal.hide();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
