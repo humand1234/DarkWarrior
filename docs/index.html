@@ -156,14 +156,42 @@
         color: #fff !important;
     }
     </style>
+    <!-- Add Google Fonts for Playfair Display and Dancing Script -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header style="background: #a05cd1; background: linear-gradient(182deg, rgba(160, 92, 209, 1) 0%, rgba(67, 22, 87, 1) 100%); position: fixed; z-index: 1; width: 100%;" class="sticky-top text-light container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <a class="navbar-brand fw-bold" href="#" style="color: #fff;">
-                    <img src="img/dark man with violet sword.png" alt="Logo" width="40" height="40" class="d-inline-block align-text-top rounded-circle me-2">
-                    Dark Warrior
+                <!-- Replaced .navbar-brand with a more formal, artistic look -->
+                <a class="navbar-brand fw-bold" href="#" style="
+                    font-family: 'Playfair Display', 'Segoe Script', 'Brush Script MT', cursive, serif;
+                    font-size: 2.4rem;
+                    letter-spacing: 3px;
+                    color: #fff;
+                    text-shadow: 0 2px 16px #431657, 0 1px 0 #fff;
+                    font-weight: 700;
+                    display: flex;
+                    align-items: center;
+                ">
+                    <span style="
+                        font-family: 'Playfair Display', serif;
+                        font-weight: 900;
+                        font-style: italic;
+                        color: #fff;
+                        letter-spacing: 2px;
+                        font-size: 2.4rem;
+                        text-shadow: 0 2px 16px #431657, 0 1px 0 #fff;
+                    ">Dark</span>
+                    <span style="
+                        font-family: 'Dancing Script', 'Segoe Script', cursive;
+                        font-weight: 700;
+                        font-size: 2.4rem;
+                        color: #ffe066;
+                        margin-left: 10px;
+                        letter-spacing: 2px;
+                        text-shadow: 0 2px 12px #a05cd1, 0 1px 0 #fff;
+                    ">Warrior</span>
                 </a>
                 <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
